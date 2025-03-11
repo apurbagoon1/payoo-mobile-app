@@ -100,7 +100,7 @@
         </div>
     </section>
     
-    <section id="cash-out" class="p-4 mt-2">
+    <section id="cashout" class="p-4 mt-2">
         <h1 class="font-semibold text-xl text-center">Cash Out</h1>
         <div class="hero-content flex-col lg:flex-row-reverse">
             <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-lg rounded-3xl p-2">
@@ -129,15 +129,15 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">User Account Number</label>
-                        <input value="" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+                        <input value="" id="user-account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount</label>
-                        <input value="" id="amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to transfer" required />
+                        <input value="" id="transfer-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to transfer" required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="1234" id="transfer-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
 
-                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Send Now</button>
+                        <button type="submit" id="transfer-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Send Now</button>
                     </fieldset>
                 </form>
             </div>
@@ -197,5 +197,6 @@
     <script src="JS/logOut.js"></script>
     <script src="JS/addMoney.js"></script>
     <script src="JS/cashOut.js"></script>
+    <script src="JS/transferMoney.js"></script>
 </body>
 </html>
