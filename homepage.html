@@ -174,15 +174,15 @@
                             <option value="dbbl">DBBL</option>
                         </select>
                         <label class="font-medium text-base">Biller Account Number</label>
-                        <input value="" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+                        <input value="" id="biller-account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount to Add</label>
-                        <input value="" id="amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to pay" required />
+                        <input value="" id="pay-bill-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to pay" required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="1234" id="pay-bill-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
 
-                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Pay Now</button>
+                        <button type="submit" id="pay-bill-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Pay Now</button>
                     </fieldset>
                 </form>
             </div>
@@ -198,5 +198,7 @@
     <script src="JS/addMoney.js"></script>
     <script src="JS/cashOut.js"></script>
     <script src="JS/transferMoney.js"></script>
+    <script src="JS/getBonus.js"></script>
+    <script src="JS/payBill.js"></script>
 </body>
 </html>
