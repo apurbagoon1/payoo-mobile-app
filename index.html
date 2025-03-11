@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-black">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payoo Mobile Application</title>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
     <!-- DaisyUI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
     <!-- Tailwind CSS VDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .outfit-font {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
 </head>
 
-<body>
+<body class="max-w-md min-h-screen mx-auto p-6 bg-[#F4F5F7] outfit-font">
     <header>
-
+        <nav class="flex justify-center items-center mt-36">
+            <div class="relative flex justify-center items-center w-full mb-10">
+                <img class="w-80 absolute -top-10" src="./assets/bg.png" alt="">
+                <img class="w-20" src="./assets/Group.png" alt="">
+            </div>
+        </nav>
     </header>
 
-    <main>
-
+    <main class="">
+        <!-- login section Starts-->
+        <section class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-lg rounded-3xl p-2">
+                <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-medium text-base">Mobile Number</label>
+                        <input value="01567891011" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your number" required />
+                        <label class="font-medium text-base">4 Digit PIN</label>
+                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <button type="submit" id="login-btn" class="btn btn-primary text-base rounded-3xl mt-4">Login</button>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
     </main>
-    
+
     <footer>
 
     </footer>
+
+    <script src="JS/logIn.js"></script>
 </body>
 
 </html>
