@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-black">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Mobile Application</title>
+    <!-- Google Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind CSS VDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .outfit-font {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="max-w-md min-h-screen mx-auto bg-[#F4F5F7] outfit-font">
+    <header class="bg-[#FFFFFF]">
+        <nav class="flex justify-between items-center p-6">
+            <div class="flex items-center gap-2">
+                <img class="w-12" src="assets/Group.png" alt="logo">
+                <div>
+                    <h3 class="font-extrabold text-lg">$4500</h3>
+                    <p class="opacity-50">Available Balance</p>
+                </div>
+            </div>
+            <button class="btn btn-outline border-[#0808082a] opacity-70 font-normal"><img src="assets/logout.png" alt="">Log Out</button>
+        </nav>
+        <div class="border-t border-[#0808081a] border-solid w-full"></div>
+    </header>
+
+    <section class="p-6 bg-[#FFFFFF]">
+        <div class="my-2">
+            <h1 class="font-bold text-2xl leading-7 mb-3">🔥Welcome to Payooo!</h1>
+            <p class="opacity-50 leading-6">Enjoy easy and convenient financial services with us. Cashout charge is low and transactions are fast, secure, and hassle-free!</p>
+        </div>
+        <div class="grid grid-cols-3 grid-rows-2 gap-4 mt-4">
+            <div class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+                <img class="mx-auto" src="assets/wallet1.png" alt="">
+                <p class="text-sm opacity-70">Add Money</p>
+            </div>
+            <div class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+                <img class="mx-auto" src="assets/send1.png" alt="">
+                <p class="text-sm opacity-70">Cashout</p>
+            </div>
+            <div class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+                <img class="mx-auto" src="assets/money1.png" alt="">
+                <p class="text-sm opacity-70">Transfer Money</p>
+            </div>
+            <div class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+                <img class="mx-auto" src="assets/bonus1.png" alt="">
+                <p class="text-sm opacity-70">Get Bonus</p>
+            </div>
+            <div class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+                <img class="mx-auto" src="assets/purse1.png" alt="">
+                <p class="text-sm opacity-70">Pay Bill</p>
+            </div>
+            <div class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+                <img class="mx-auto" src="assets/transaction1.png" alt="">
+                <p class="text-sm opacity-70">Transactions</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="add-money" class="p-4 mt-2">
+        <h1 class="font-semibold text-xl text-center">Add Money</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-lg rounded-3xl p-2">
+                <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-medium text-base">Select A Bank</label>
+                        <select name="" id="" class="text-sm text-[#0808088a] px-4 py-3 rounded-3xl bg-[#F4F5F7] border-none mb-2">
+                            <option disabled selected>Select bank</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="dbbl">DBBL</option>
+                        </select>
+                        <label class="font-medium text-base">Bank Account Number</label>
+                        <input value="01567891011" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+
+                        <label class="font-medium text-base">Amount to Add</label>
+                        <input value="" id="amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to add" required />
+
+                        <label class="font-medium text-base">Pin Number</label>
+                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+
+                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Add Money</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section id="cash-out" class="p-4 mt-2">
+        <h1 class="font-semibold text-xl text-center">Cash Out</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-lg rounded-3xl p-2">
+                <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-medium text-base">Agent Number</label>
+                        <input value="" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to withdraw" required />
+
+                        <label class="font-medium text-base">Amount</label>
+                        <input value="" id="amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your number" required />
+
+                        <label class="font-medium text-base">Pin Number</label>
+                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+
+                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Withdraw Money</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="transfer-money" class="p-4 mt-2">
+        <h1 class="font-semibold text-xl text-center">Transfer Money</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-lg rounded-3xl p-2">
+                <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-medium text-base">User Account Number</label>
+                        <input value="" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+
+                        <label class="font-medium text-base">Amount</label>
+                        <input value="" id="amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to transfer" required />
+
+                        <label class="font-medium text-base">Pin Number</label>
+                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+
+                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Send Now</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-bonus" class="p-4 mt-2">
+        <h1 class="font-semibold text-xl text-center">Get Bonus</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-lg rounded-3xl p-2">
+                <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-medium text-base">Enter Bonus Coupon</label>
+                        <input value="" id="account-number" type="text" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your coupon" required />
+
+                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Get Bonus</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="pay-bill" class="p-4 mt-2">
+        <h1 class="font-semibold text-xl text-center">Pay Bill</h1>
+        <div class="hero-content flex-col lg:flex-row-reverse">
+            <div class="card bg-[#FFFFFF] w-full max-w-sm shrink-0 shadow-lg rounded-3xl p-2">
+                <form class="card-body">
+                    <fieldset class="fieldset">
+                        <label class="font-medium text-base">Select To Pay</label>
+                        <select name="" id="" class="text-sm text-[#0808088a] px-4 py-3 rounded-3xl bg-[#F4F5F7] border-none mb-2">
+                            <option disabled selected>Select bank</option>
+                            <option value="Bkash">Bkash</option>
+                            <option value="Nagad">Nagad</option>
+                            <option value="dbbl">DBBL</option>
+                        </select>
+                        <label class="font-medium text-base">Biller Account Number</label>
+                        <input value="" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+
+                        <label class="font-medium text-base">Amount to Add</label>
+                        <input value="" id="amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to pay" required />
+
+                        <label class="font-medium text-base">Pin Number</label>
+                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+
+                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Pay Now</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="transaction-history" class="p-4 mt-2">      
+        <h1 class="font-semibold text-xl text-center mb-2">Transaction History</h1>
+        <p class="opacity-50 mx-auto text-center cursor-pointer hover:text-[#0874F2]">View All</p>
+    </section>
+
+     
+</body>
+</html>
