@@ -82,16 +82,16 @@
                             <option disabled selected>Select bank</option>
                             <option value="Bkash">Bkash</option>
                             <option value="Nagad">Nagad</option>
-                            <option value="dbbl">DBBL</option>
+                            <option value="DBBL">DBBL</option>
                         </select>
                         <label class="font-medium text-base">Bank Account Number</label>
                         <input value="01567891011" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount to Add</label>
-                        <input value="" id="add-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to add" required />
+                        <input value="" id="add-money-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to add" required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="1234" id="add-money-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
 
                         <button type="submit" id="add-money-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Add Money</button>
                     </fieldset>
@@ -107,15 +107,15 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">Agent Number</label>
-                        <input value="" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to withdraw" required />
+                        <input value="" id="agent-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to withdraw" required />
 
                         <label class="font-medium text-base">Amount</label>
-                        <input value="" id="amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your number" required />
+                        <input value="" id="cashout-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your number" required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="1234" id="cashout-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
 
-                        <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Withdraw Money</button>
+                        <button type="submit" id="cashout-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Withdraw Money</button>
                     </fieldset>
                 </form>
             </div>
@@ -196,5 +196,6 @@
 
     <script src="JS/logOut.js"></script>
     <script src="JS/addMoney.js"></script>
+    <script src="JS/cashOut.js"></script>
 </body>
 </html>
