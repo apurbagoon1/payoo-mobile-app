@@ -22,7 +22,7 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     }
 
     if (amount === "" || pin === "") {
-        showToast("Please fill in both fields.", "error");
+        showToast("Please fill in both amount and PIN.", "error");
         return;
     }
 
@@ -31,10 +31,10 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
         return;
     }
 
-    if (pin.length !== 4 || isNaN(pin)) {
-        showToast("PIN must be 4 numeric digits.", "error");
-        return;
-    }
+    // if (pin.length !== 4 || isNaN(pin)) {
+    //     showToast("PIN must be 4 numeric digits.", "error");
+    //     return;
+    // }
 
     const userPin = sessionStorage.getItem("userPin");
     if (pin !== userPin) {
@@ -48,7 +48,8 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     document.getElementById("main-balance").innerText = newBalance.toFixed(2);
 
     showToast("Money added successfully!", "success");
-
+    
+    bankSelect.value = "";
     amountInput.value = "";
     pinInput.value = "";
     accountNumberInput.value = "";

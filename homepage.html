@@ -99,12 +99,12 @@
                             placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount to Add</label>
-                        <input value="" id="add-money-amount" type="number" maxlength="11"
+                        <input value="" id="add-money-amount" type="number"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to add"
                             required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="" id="add-money-pin" type="text"
+                        <input value="" id="add-money-pin" type="text" maxlength="4"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
                             required />
 
@@ -128,12 +128,12 @@
                             placeholder="Enter amount to withdraw" required />
 
                         <label class="font-medium text-base">Amount</label>
-                        <input value="" id="cashout-amount" type="number" maxlength="11"
+                        <input value="" id="cashout-amount" type="number" 
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your number"
                             required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="" id="cashout-pin" type="text"
+                        <input value="" id="cashout-pin" type="text" maxlength="4"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
                             required />
 
@@ -157,12 +157,12 @@
                             placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount</label>
-                        <input value="" id="transfer-amount" type="number" maxlength="11"
+                        <input value="" id="transfer-amount" type="number"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2"
                             placeholder="Enter amount to transfer" required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="" id="transfer-pin" type="text"
+                        <input value="" id="transfer-pin" type="text" maxlength="4"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
                             required />
 
@@ -181,7 +181,7 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">Enter Bonus Coupon</label>
-                        <input value="" id="account-number" type="text" maxlength="11"
+                        <input value="" id="account-number" type="text"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter your coupon"
                             required />
 
@@ -199,9 +199,9 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">Select To Pay</label>
-                        <select name="" id=""
+                        <select name="" id="bank-pay"
                             class="text-sm text-[#0808088a] px-4 py-3 rounded-3xl bg-[#F4F5F7] border-none mb-2">
-                            <option disabled selected>Select bank</option>
+                            <option value="">Select bank</option>
                             <option value="Bkash">Bkash</option>
                             <option value="Nagad">Nagad</option>
                             <option value="dbbl">DBBL</option>
@@ -212,12 +212,12 @@
                             placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount to Add</label>
-                        <input value="" id="pay-bill-amount" type="number" maxlength="11"
+                        <input value="" id="pay-bill-amount" type="number"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to pay"
                             required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="" id="pay-bill-pin" type="text"
+                        <input value="" id="pay-bill-pin" type="text" maxlength="4"
                             class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
                             required />
 
@@ -239,7 +239,7 @@
         class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden px-4 py-2 rounded-lg shadow-lg text-white font-medium text-sm transition-all duration-300">
         <span id="toast-message"></span>
     </div>
-    
+
     <script src="JS/toast.js"></script>
     <script src="JS/logOut.js"></script>
     <script src="JS/addMoney.js"></script>
