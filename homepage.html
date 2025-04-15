@@ -33,7 +33,8 @@
                     <p class="opacity-50">Available Balance</p>
                 </div>
             </div>
-            <button id="log-out" class="btn btn-outline rounded-lg border-[#0808083a] opacity-70 font-normal"><img src="assets/logout.png" alt="">Log Out</button>
+            <button id="log-out" class="btn btn-outline rounded-lg border-[#0808083a] opacity-70 font-normal"><img
+                    src="assets/logout.png" alt="">Log Out</button>
         </nav>
         <div class="border border-[#0808081a] border-solid w-full"></div>
     </header>
@@ -41,30 +42,37 @@
     <section class="p-6 bg-[#FFFFFF]">
         <div class="my-2">
             <h1 class="font-bold text-2xl leading-7 mb-3">🔥Welcome to Payooo!</h1>
-            <p class="opacity-50 leading-6">Enjoy easy and convenient financial services with us. Cashout charge is low and transactions are fast, secure, and hassle-free!</p>
+            <p class="opacity-50 leading-6">Enjoy easy and convenient financial services with us. Cashout charge is low
+                and transactions are fast, secure, and hassle-free!</p>
         </div>
         <div class="grid grid-cols-3 grid-rows-2 gap-4 mt-4">
-            <div id="add-money-box" class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+            <div id="add-money-box"
+                class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
                 <img class="mx-auto" src="assets/wallet1.png" alt="">
                 <p class="text-sm opacity-70">Add Money</p>
             </div>
-            <div id="cashout-box" class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+            <div id="cashout-box"
+                class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
                 <img class="mx-auto" src="assets/send1.png" alt="">
                 <p class="text-sm opacity-70">Cashout</p>
             </div>
-            <div id="transfer-money-box" class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+            <div id="transfer-money-box"
+                class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
                 <img class="mx-auto" src="assets/money1.png" alt="">
                 <p class="text-sm opacity-70">Transfer Money</p>
             </div>
-            <div id="get-bonus-box" class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+            <div id="get-bonus-box"
+                class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
                 <img class="mx-auto" src="assets/bonus1.png" alt="">
                 <p class="text-sm opacity-70">Get Bonus</p>
             </div>
-            <div id="pay-bill-box" class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+            <div id="pay-bill-box"
+                class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
                 <img class="mx-auto" src="assets/purse1.png" alt="">
                 <p class="text-sm opacity-70">Pay Bill</p>
             </div>
-            <div id="transactions-box" class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
+            <div id="transactions-box"
+                class="text-center rounded-xl cursor-pointer space-y-2 py-4 border border-[#0808081a] hover:border hover:border-[#0874F2] hover:text-[#0874F2]">
                 <img class="mx-auto" src="assets/transaction1.png" alt="">
                 <p class="text-sm opacity-70">Transactions</p>
             </div>
@@ -78,28 +86,36 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">Select A Bank</label>
-                        <select name="" id="" class="text-sm text-[#0808088a] px-4 py-3 rounded-3xl bg-[#F4F5F7] border-none mb-2">
-                            <option disabled selected>Select bank</option>
+                        <select name="" id="bank-select"
+                            class="text-sm text-[#0808088a] px-4 py-3 rounded-3xl bg-[#F4F5F7] border-none mb-2">
+                            <option value="">Select bank</option>
                             <option value="Bkash">Bkash</option>
                             <option value="Nagad">Nagad</option>
                             <option value="DBBL">DBBL</option>
                         </select>
                         <label class="font-medium text-base">Bank Account Number</label>
-                        <input value="01567891011" id="account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+                        <input value="" id="account-number" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2"
+                            placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount to Add</label>
-                        <input value="" id="add-money-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to add" required />
+                        <input value="" id="add-money-amount" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to add"
+                            required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="add-money-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="" id="add-money-pin" type="text"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
+                            required />
 
-                        <button type="submit" id="add-money-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Add Money</button>
+                        <button type="submit" id="add-money-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Add
+                            Money</button>
                     </fieldset>
                 </form>
             </div>
         </div>
     </section>
-    
+
     <section id="cashout" class="p-4 mt-2">
         <h1 class="font-semibold text-xl text-center">Cash Out</h1>
         <div class="hero-content flex-col lg:flex-row-reverse">
@@ -107,15 +123,22 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">Agent Number</label>
-                        <input value="" id="agent-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to withdraw" required />
+                        <input value="" id="agent-number" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2"
+                            placeholder="Enter amount to withdraw" required />
 
                         <label class="font-medium text-base">Amount</label>
-                        <input value="" id="cashout-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your number" required />
+                        <input value="" id="cashout-amount" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your number"
+                            required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="cashout-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="" id="cashout-pin" type="text"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
+                            required />
 
-                        <button type="submit" id="cashout-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Withdraw Money</button>
+                        <button type="submit" id="cashout-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Withdraw
+                            Money</button>
                     </fieldset>
                 </form>
             </div>
@@ -129,15 +152,22 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">User Account Number</label>
-                        <input value="" id="user-account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+                        <input value="" id="user-account-number" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2"
+                            placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount</label>
-                        <input value="" id="transfer-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter amount to transfer" required />
+                        <input value="" id="transfer-amount" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2"
+                            placeholder="Enter amount to transfer" required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="transfer-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="" id="transfer-pin" type="text"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
+                            required />
 
-                        <button type="submit" id="transfer-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Send Now</button>
+                        <button type="submit" id="transfer-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Send
+                            Now</button>
                     </fieldset>
                 </form>
             </div>
@@ -151,7 +181,9 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">Enter Bonus Coupon</label>
-                        <input value="" id="account-number" type="text" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter your coupon" required />
+                        <input value="" id="account-number" type="text" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter your coupon"
+                            required />
 
                         <button type="submit" id="" class="btn btn-primary text-lg rounded-3xl mt-4">Get Bonus</button>
                     </fieldset>
@@ -167,33 +199,48 @@
                 <form class="card-body">
                     <fieldset class="fieldset">
                         <label class="font-medium text-base">Select To Pay</label>
-                        <select name="" id="" class="text-sm text-[#0808088a] px-4 py-3 rounded-3xl bg-[#F4F5F7] border-none mb-2">
+                        <select name="" id=""
+                            class="text-sm text-[#0808088a] px-4 py-3 rounded-3xl bg-[#F4F5F7] border-none mb-2">
                             <option disabled selected>Select bank</option>
                             <option value="Bkash">Bkash</option>
                             <option value="Nagad">Nagad</option>
                             <option value="dbbl">DBBL</option>
                         </select>
                         <label class="font-medium text-base">Biller Account Number</label>
-                        <input value="" id="biller-account-number" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Enter account number" required />
+                        <input value="" id="biller-account-number" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2"
+                            placeholder="Enter account number" required />
 
                         <label class="font-medium text-base">Amount to Add</label>
-                        <input value="" id="pay-bill-amount" type="number" maxlength="11" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to pay" required />
+                        <input value="" id="pay-bill-amount" type="number" maxlength="11"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none mb-2" placeholder="Add Amount to pay"
+                            required />
 
                         <label class="font-medium text-base">Pin Number</label>
-                        <input value="1234" id="pay-bill-pin" type="text" class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN" required />
+                        <input value="" id="pay-bill-pin" type="text"
+                            class="input p-4 rounded-3xl bg-[#F4F5F7] border-none" placeholder="Enter 4 Digit PIN"
+                            required />
 
-                        <button type="submit" id="pay-bill-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Pay Now</button>
+                        <button type="submit" id="pay-bill-btn" class="btn btn-primary text-lg rounded-3xl mt-4">Pay
+                            Now</button>
                     </fieldset>
                 </form>
             </div>
         </div>
     </section>
 
-    <section id="transaction-history" class="p-4 mt-2">      
+    <section id="transaction-history" class="p-4 mt-2">
         <h1 class="font-semibold text-xl text-center mb-2">Transaction History</h1>
         <p class="opacity-50 mx-auto text-center cursor-pointer hover:text-[#0874F2]">View All</p>
     </section>
 
+    <!-- Toast Notification -->
+    <div id="toast"
+        class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 hidden px-4 py-2 rounded-lg shadow-lg text-white font-medium text-sm transition-all duration-300">
+        <span id="toast-message"></span>
+    </div>
+    
+    <script src="JS/toast.js"></script>
     <script src="JS/logOut.js"></script>
     <script src="JS/addMoney.js"></script>
     <script src="JS/cashOut.js"></script>
@@ -202,4 +249,5 @@
     <script src="JS/payBill.js"></script>
     <script src="JS/toggle.js"></script>
 </body>
+
 </html>

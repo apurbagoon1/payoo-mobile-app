@@ -1,17 +1,55 @@
 document.getElementById('add-money-btn').addEventListener('click', function (event) {
     event.preventDefault();
-    const amount = document.getElementById("add-money-amount").value;
-    const convertedAmount = parseFloat(amount);
-    const pin = document.getElementById("add-money-pin").value;
-    const convertedPin = parseInt(pin);
-    const mainBalance = document.getElementById("main-balance").innerText;
-    const convertedMainbalance = parseFloat(mainBalance);
 
-    if (convertedPin===1234) {
-        const sum = convertedMainbalance + convertedAmount;
-        document.getElementById("main-balance").innerText = sum;
+    const bankSelect = document.getElementById("bank-select");
+    const accountNumberInput = document.getElementById("account-number");
+    const amountInput = document.getElementById("add-money-amount");
+    const pinInput = document.getElementById("add-money-pin");
+
+    const bank = bankSelect.value;
+    const accountNumber = accountNumberInput.value.trim();
+    const amount = amountInput.value.trim();
+    const pin = pinInput.value.trim();
+
+    if (bank === "") {
+        showToast("Please select a bank.", "error");
+        return;
     }
-    else {
-        console.log("Incorrect Pin!")
+
+    if (accountNumber === "") {
+        showToast("Please enter your account number.", "error");
+        return;
     }
+
+    if (amount === "" || pin === "") {
+        showToast("Please fill in both fields.", "error");
+        return;
+    }
+
+    if (isNaN(amount) || parseFloat(amount) <= 0) {
+        showToast("Enter a valid amount greater than 0.", "error");
+        return;
+    }
+
+    if (pin.length !== 4 || isNaN(pin)) {
+        showToast("PIN must be 4 numeric digits.", "error");
+        return;
+    }
+
+    const userPin = sessionStorage.getItem("userPin");
+    if (pin !== userPin) {
+        showToast("Incorrect PIN!", "error");
+        return;
+    }
+
+    const convertedAmount = parseFloat(amount);
+    const mainBalance = parseFloat(document.getElementById("main-balance").innerText);
+    const newBalance = mainBalance + convertedAmount;
+    document.getElementById("main-balance").innerText = newBalance.toFixed(2);
+
+    showToast("Money added successfully!", "success");
+
+    amountInput.value = "";
+    pinInput.value = "";
+    accountNumberInput.value = "";
 });
