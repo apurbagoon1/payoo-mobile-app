@@ -31,10 +31,10 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
         return;
     }
 
-    // if (pin.length !== 4 || isNaN(pin)) {
-    //     showToast("PIN must be 4 numeric digits.", "error");
-    //     return;
-    // }
+    if (pin.length !== 4 || isNaN(pin)) {
+        showToast("PIN must be 4 numeric digits.", "error");
+        return;
+    }
 
     const userPin = sessionStorage.getItem("userPin");
     if (pin !== userPin) {
@@ -47,10 +47,12 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     const newBalance = mainBalance + convertedAmount;
     document.getElementById("main-balance").innerText = newBalance.toFixed(2);
 
-    showToast("Money added successfully!", "success");
-    
+    // Reset fields
     bankSelect.value = "";
+    accountNumberInput.value = "";
     amountInput.value = "";
     pinInput.value = "";
-    accountNumberInput.value = "";
+
+    showToast("Money added successfully!", "success");
+    saveTransaction("Bank Deposit", `৳${convertedAmount.toFixed(2)} Added`);
 });

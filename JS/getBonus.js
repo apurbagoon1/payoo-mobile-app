@@ -27,8 +27,9 @@ document.getElementById("bonus-btn").addEventListener("click", function (event) 
         showToast(`Bonus of ${bonusAmount} added successfully!`, "success");
 
         couponInput.value = "";
+
+        saveTransaction("Bonus", `৳${bonusAmount} Bonus Received`);
     } 
-    
     else {
         showToast("Invalid or expired coupon code.", "error");
     }

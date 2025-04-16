@@ -1,4 +1,3 @@
-// toast.js
 function showToast(message, type = 'success') {
     const toast = document.getElementById("toast");
     const toastMessage = document.getElementById("toast-message");

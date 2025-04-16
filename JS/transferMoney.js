@@ -10,33 +10,33 @@ document.getElementById("transfer-btn").addEventListener("click", function (even
   const number = numberInput.value.trim();
 
   if (amount === "" || pin === "" || number === "") {
-      showToast("Please fill in all fields.", "error");
-      return;
+    showToast("Please fill in all fields.", "error");
+    return;
   }
 
   if (number.length !== 11 || isNaN(number)) {
-      showToast("Enter a valid 11-digit mobile number.", "error");
-      return;
+    showToast("Enter a valid 11-digit mobile number.", "error");
+    return;
   }
 
   if (isNaN(amount) || parseFloat(amount) <= 0) {
-      showToast("Enter a valid amount greater than 0.", "error");
-      return;
+    showToast("Enter a valid amount greater than 0.", "error");
+    return;
   }
 
 
   const userPin = sessionStorage.getItem("userPin");
   if (pin !== userPin) {
-      showToast("Incorrect PIN!", "error");
-      return;
+    showToast("Incorrect PIN!", "error");
+    return;
   }
 
   const convertedAmount = parseFloat(amount);
   const mainBalance = parseFloat(document.getElementById("main-balance").innerText);
 
   if (convertedAmount > mainBalance) {
-      showToast("Insufficient balance.", "error");
-      return;
+    showToast("Insufficient balance.", "error");
+    return;
   }
 
   const newBalance = mainBalance - convertedAmount;
@@ -46,4 +46,6 @@ document.getElementById("transfer-btn").addEventListener("click", function (even
   amountInput.value = "";
   pinInput.value = "";
   numberInput.value = "";
+
+  saveTransaction("Money Transfer", `৳${amount} Transfered`);
 });

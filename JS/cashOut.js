@@ -48,4 +48,6 @@ document.getElementById("cashout-btn").addEventListener("click", function (event
   amountInput.value = "";
   pinInput.value = "";
   agentNumberInput.value = "";
+
+  saveTransaction("Cash Out", `৳${convertedAmount.toFixed(2)} Withdrawn`);
 });

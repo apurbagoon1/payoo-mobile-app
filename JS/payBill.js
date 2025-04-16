@@ -12,7 +12,6 @@ document.getElementById("pay-bill-btn").addEventListener("click", function (even
   const amount = amountInput.value.trim();
   const pin = pinInput.value.trim();
 
-  // Validation
   if (bank === "") {
     showToast("Please select a bank.", "error");
     return;
@@ -55,4 +54,6 @@ document.getElementById("pay-bill-btn").addEventListener("click", function (even
   accountNumberInput.value = "";
   amountInput.value = "";
   pinInput.value = "";
+
+  saveTransaction("Bill Payment", `৳${amount} Paid`);
 });

@@ -1,4 +1,3 @@
-// Function to show toast notifications at the top center
 function showToast(message, type = 'success') {
     const toast = document.getElementById("toast");
     const toastMessage = document.getElementById("toast-message");
@@ -14,7 +13,6 @@ function showToast(message, type = 'success') {
     }, 3000);
 }
 
-// Login form validation and navigation
 document.getElementById("login-btn").addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -36,7 +34,6 @@ document.getElementById("login-btn").addEventListener("click", function (event) 
         return;
     }
 
-    // Success message (no hardcoded credential check)
     showToast("Login successful!", "success");
 
     sessionStorage.setItem("userPin", pin);
