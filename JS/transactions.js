@@ -78,8 +78,9 @@ function displayTransactions(showAll = false) {
     if (transactions.length === 0) {
         listContainer.innerHTML = `
             <div class="flex flex-col items-center justify-center text-center p-6 bg-gray-50 rounded-xl shadow-sm">
-                <img src="assets/empty.png" alt="Empty" class="w-20 h-20 mb-4 opacity-60">
-                <p class="text-gray-500 text-sm">No transactions yet.<br>Add or receive funds to see them here.</p>
+                <img src="assets/empty.png" alt="Empty" class="w-20 h-20 mb-4 opacity-70">
+                <h5 class="text-gray-600 text-lg font-medium">No transactions yet!</h5>
+                <p class="text-gray-500">Add or receive funds to see them here.</h5>
             </div>
         `;
         return;
