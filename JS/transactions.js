@@ -4,7 +4,10 @@ function showToast(message, type = 'success') {
 
     toastMessage.innerText = message;
 
-    toast.className = `fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-4 py-2 rounded-lg shadow-lg font-medium text-sm transition-all duration-300 ${type === 'success' ? 'bg-green-500' : 'bg-red-500'} text-white`;
+    toast.className =
+        `fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-4 py-2 rounded-lg shadow-lg font-medium text-sm transition-all duration-300 ${
+            type === 'success' ? 'bg-green-500' : 'bg-red-500'
+        } text-white`;
 
     toast.classList.remove("hidden");
 
@@ -32,7 +35,7 @@ function deleteTransaction(index) {
         transactions.splice(index, 1);
         localStorage.setItem("transactions", JSON.stringify(transactions));
         showToast("Transaction deleted successfully.", "success");
-        displayTransactions(true);
+        displayTransactions(currentlyShowingAll); // re-render with same state
     } else {
         showToast("Unable to delete transaction.", "error");
     }
@@ -52,17 +55,36 @@ function formatDateLabel(dateString) {
     return dateString;
 }
 
+let currentlyShowingAll = false;
+
 function displayTransactions(showAll = false) {
+    currentlyShowingAll = showAll;
+
     const historyContainer = document.getElementById("transaction-history");
     const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
 
     historyContainer.innerHTML = `
         <h1 class="font-semibold text-xl text-center mb-2">Transaction History</h1>
-        <p id="view-transaction" class="opacity-50 mx-auto text-center cursor-pointer hover:text-[#0874F2]">${showAll ? 'Close' : 'View All'}</p>
+        <p 
+            id="view-transaction" 
+            class="mx-auto text-center cursor-pointer font-medium transition hidden"
+        ></p>
         <div id="transactions-list" class="mt-4 space-y-2"></div>
     `;
 
     const listContainer = document.getElementById("transactions-list");
+    const viewToggleBtn = document.getElementById("view-transaction");
+
+    if (transactions.length === 0) {
+        listContainer.innerHTML = `
+            <div class="flex flex-col items-center justify-center text-center p-6 bg-gray-50 rounded-xl shadow-sm">
+                <img src="assets/empty.png" alt="Empty" class="w-20 h-20 mb-4 opacity-60">
+                <p class="text-gray-500 text-sm">No transactions yet.<br>Add or receive funds to see them here.</p>
+            </div>
+        `;
+        return;
+    }
+
     const displayList = showAll ? transactions.slice().reverse() : transactions.slice(-5).reverse();
 
     displayList.forEach((txn, i) => {
@@ -90,15 +112,25 @@ function displayTransactions(showAll = false) {
         listContainer.appendChild(div);
     });
 
+    if (transactions.length > 5) {
+        viewToggleBtn.classList.remove("hidden");
+        viewToggleBtn.innerText = showAll ? "Close" : "View All";
+
+        viewToggleBtn.classList.remove("text-[#0874F2]", "text-red-400");
+        viewToggleBtn.classList.add(showAll ? "text-red-400" : "text-[#0874F2]");
+
+        viewToggleBtn.onclick = () => {
+            displayTransactions(!currentlyShowingAll);
+        };
+    } else {
+        viewToggleBtn.classList.add("hidden");
+    }
+
     document.querySelectorAll(".delete-btn").forEach(btn => {
         btn.addEventListener("click", () => {
             const indexToDelete = parseInt(btn.getAttribute("data-index"));
             deleteTransaction(indexToDelete);
         });
-    });
-
-    document.getElementById("view-transaction").addEventListener("click", () => {
-        displayTransactions(!showAll);
     });
 }
 
